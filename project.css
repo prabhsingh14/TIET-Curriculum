@@ -1,0 +1,154 @@
+/* universal selector */
+* {
+  margin: 0;
+  /* padding is used to create space around element */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  height: 100vh;
+  /* no scrolling in x-direction */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  perspective: 10px;
+}
+
+.container {
+  position: relative;
+  display: flex; /*by def: row*/
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  /* to bring 3d or parallax effect */
+  transform-style: preserve-3d;
+
+  /* for overlapping, which layer to come above which layer */
+  z-index: -1; /*by def = 0*/
+}
+
+/* to bring parallax effect */
+.background {
+  transform: translateZ(-40px) scale(5);
+}
+
+.foreground {
+  transform: translateZ(-20px) scale(3);
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /*more than 0 would hide it*/
+
+  /* it will tell how the img or a video should resize to fit its container */
+  object-fit: cover;
+}
+
+h1 {
+  position: absolute;
+  top: 5rem; /*rem -> root element's size*/
+  left: 50%;
+  font-size: 5rem;
+  letter-spacing: 4px; /*space b/w characters in a text*/
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  background-color: rgb(45, 45, 45);
+  color: white;
+  padding: 5rem 0;
+}
+
+.secHeading {
+  font-size: 5rem;
+  padding: 0 10rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  padding: 0 10rem;
+  margin: 5rem 0;
+}
+
+.bg {
+  position: relative;
+  width: 100%;
+  /* to fix background image */
+  background-attachment: fixed;
+  background-position: center;
+  /* to cover photo on viewport */
+  background-size: cover;
+  height: 500px;
+}
+
+.desc {
+  position: absolute;
+  background-color: white;
+  padding: 0.5rem 2.5rem;
+  top: 50%;
+  left: 60%;
+  transform: translateX(-50%) translateX(-50%);
+  color: black;
+  font-size: 2rem;
+  /* how thick or thin content should be */
+  font-weight: 400;
+}
+
+.bg1 {
+  background-image: url(coe.png);
+}
+
+.bg2 {
+  background-image: url(cobs.png);
+}
+
+.bg3 {
+  background-image: url(enc.png);
+}
+
+.bg4 {
+  background-image: url(eec.png);
+}
+
+.bg5 {
+  background-image: url(ee.png);
+}
+
+.bg6 {
+  background-image: url(eic.png);
+}
+
+.bg7 {
+  background-image: url(ece.png);
+}
+
+.bg8 {
+  background-image: url(mee.png);
+}
+
+.bg9 {
+  background-image: url(mech.png);
+}
+
+.bg10 {
+  background-image: url(civil.png);
+}
+
+.bg11 {
+  background-image: url(chem.png);
+}
+
+.bg12 {
+  background-image: url(biotech.png);
+}
+
+.bg13 {
+  background-image: url(biomed.png);
+}
